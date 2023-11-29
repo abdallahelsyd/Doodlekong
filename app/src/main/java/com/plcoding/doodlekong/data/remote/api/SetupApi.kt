@@ -20,7 +20,7 @@ interface SetupApi {
     @GET("/api/getRooms")
     suspend fun getRooms(
         @Query("searchQuery") searchQuery: String
-    ): Response<BasicApiResponse>
+    ): Response<List<Room>>
 
     @GET("/api/joinRoom")
     suspend fun joinRoom(
